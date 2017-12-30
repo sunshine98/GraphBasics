@@ -1,0 +1,3 @@
+C:/Users/Administrator/CLionProjects/graphbasics/cmake-build-debug/CMakeFiles/graphbasics.dir
+C:/Users/Administrator/CLionProjects/graphbasics/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Administrator/CLionProjects/graphbasics/cmake-build-debug/CMakeFiles/rebuild_cache.dir
