@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Administrator/CLionProjects/graphbasics/DenseGraph.h">
+			<Option target="graphbasics"/>
+		</Unit>
 		<Unit filename="C:/Users/Administrator/CLionProjects/graphbasics/SparseGraph.h">
 			<Option target="graphbasics"/>
 		</Unit>
