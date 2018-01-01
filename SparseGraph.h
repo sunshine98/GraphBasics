@@ -53,6 +53,41 @@ public:
         return false;
     }
 
+    class adjIterator {
+    private:
+        SparseGraph &G;
+        int v;
+        int index;
+    public:
+        adjIterator(SparseGraph &graph, int v) : G(graph) {
+            this->v = v;
+            this->index = 0;
+        }
 
-};
+        ~adjIterator() {
+
+        }
+
+        int begin() {
+            index = 0;
+            if (G.g[v].size())
+                return G.g[v][index];
+            return -1;
+        }
+
+        int next() {
+            index++;
+            if (index < G.g[v].size())
+                return G.g[v][index];
+            return -1;
+        }
+
+        bool end() {
+            return index >= G.g[v].size();
+        }
+    };
+    };
+
+
+
 #endif //GRAPHBASICS_SPARSEGRAPH_H

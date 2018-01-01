@@ -6,7 +6,33 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Administrator/CLionProjects/graphbasics/DenseGraph.h
+cassert
+-
+iostream
+-
+vector
+-
+
+C:/Users/Administrator/CLionProjects/graphbasics/SparseGraph.h
+iostream
+-
+cassert
+-
+vector
+-
+
 C:/Users/Administrator/CLionProjects/graphbasics/main.cpp
 iostream
 -
+cstdlib
+-
+ctime
+-
+cassert
+-
+SparseGraph.h
+C:/Users/Administrator/CLionProjects/graphbasics/SparseGraph.h
+DenseGraph.h
+C:/Users/Administrator/CLionProjects/graphbasics/DenseGraph.h
 

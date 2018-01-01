@@ -2,8 +2,8 @@
 // Created by Administrator on 2017/12/30.
 //
 
-#ifndef GRAPHBASICS_SPARSEGRAPH_H
-#define GRAPHBASICS_SPARSEGRAPH_H
+#ifndef GRAPHBASICS_DENSEGRAPH_H
+#define GRAPHBASICS_DENSEGRAPH_H
 
 #include <cassert>
 #include <iostream>
@@ -31,7 +31,7 @@ public:
     int V(){//返回图中的顶点数量
         return n;
     };
-    int E{//返回图中的边数量
+    int E(){//返回图中的边数量
             return m;
     };
 
@@ -55,11 +55,43 @@ public:
         return g[v][w];
     }
 
+    class adjIterator{
+    private:
+        DenseGraph &G;
+        int v;
+        int index;
 
+    public:
+        adjIterator(DenseGraph&graph,int v):G(graph){
+            assert(v>=0&&v<G.n);
+            this->index=-1;
+            this->v=v;
+        }
+        ~adjIterator(){};
+
+        int begin(){
+            index=-1;
+            return next();
+        }
+
+        int next(){
+            for(index+=1;index<G.V();index++){
+                if(G.g[v][index]==true){
+                    return index;
+                }
+            }
+            return -1;
+        }
+
+        bool end(){
+            return index>=G.V();
+        }
+
+    };
 
 
 
 
 
 };
-#endif //GRAPHBASICS_SPARSEGRAPH_H
+#endif //GRAPHBASICS_DENSEGRAPH_H
