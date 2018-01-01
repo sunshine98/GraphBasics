@@ -6,11 +6,10 @@
 
 该图仓库包含的内容如下
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+方法 | 使用语言
+--- | ---
+邻接表 | C++
+邻接矩阵 | C++
 
 您可以给我打赏一定的金额鼓励我的前进 
 <img src="http://ww1.sinaimg.cn/large/0060lm7Tly1fmlyfhapirj30p00qadj6.jpg" width = "500" height = "500" alt="图片名称" align=center />
