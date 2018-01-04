@@ -11,6 +11,7 @@
 [二叉树](https://github.com/sunshine98/binary-tree) | C++ | 数据结构与算法
 [并查集](https://github.com/sunshine98/UnionFind) | C++ | 数据结构与算法 
 [图](https://github.com/sunshine98/GraphBasics)     | C++ | 数据结构与算法
+[索引堆](https://github.com/sunshine98/IndexHeap) | C++ | 数据结构与算法
 
 
 ### 如果您觉得我的文章对您有用，您可以给我打赏一定的金额鼓励我的前进 
