@@ -55,20 +55,21 @@ public:
         return g[v][w];
     }
 
-    class adjIterator{
+    class adjIterator{//构建稠密图的相邻节点迭代器
     private:
-        DenseGraph &G;
-        int v;
-        int index;
+        DenseGraph &G;//需要进行操作的图的引用
+        int v;//需要遍历的节点
+        int index;//index指向迭代器正在访问的元素
 
     public:
-        adjIterator(DenseGraph&graph,int v):G(graph){
+        adjIterator(DenseGraph&graph,int v):G(graph){//生成一个迭代器的构造函数
             assert(v>=0&&v<G.n);
             this->index=-1;
             this->v=v;
         }
         ~adjIterator(){};
-
+//因为邻接矩阵结构的特殊性，即邻接矩阵中的一个节点其关联链表中的元素并不是都有效
+    //必须值为true才有效，因此并不能保证直接从第一个元素开始访问，所以index初始化为-1
         int begin(){
             index=-1;
             return next();
@@ -76,7 +77,7 @@ public:
 
         int next(){
             for(index+=1;index<G.V();index++){
-                if(G.g[v][index]==true){
+                if(G.g[v][index]==true){//只把真正有效的元素返回出去
                     return index;
                 }
             }
@@ -84,7 +85,7 @@ public:
         }
 
         bool end(){
-            return index>=G.V();
+            return index>=G.V();//判断是否遍历完成
         }
 
     };

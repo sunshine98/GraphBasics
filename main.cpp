@@ -7,19 +7,19 @@
 using namespace std;
 int main() {
     int N=20;
-    int M=100;
+    int M=100;//生成一个有20个节点，100条边的图
     srand(time(NULL));
     //sparseGraph
     SparseGraph g1(N, false);
-    for(int i=0;i<M;i++){
+    for(int i=0;i<M;i++){//对图中存在的节点进行随机的“连边”操作
         int a=rand()%N;
         int b=rand()%N;
         g1.addEdge(a,b);
     }
-    for(int v=0;v<N;v++){
+    for(int v=0;v<N;v++){//对图中的每一个节点都使用迭代器进行迭代
         cout<<v<<": ";
-        SparseGraph::adjIterator adj(g1,v);
-        for(int w=adj.begin();!adj.end();w=adj.next())
+        SparseGraph::adjIterator adj(g1,v);//生成节点对应的迭代器
+        for(int w=adj.begin();!adj.end();w=adj.next())//调用生成的节点迭代器的三种方法
             cout<<w<<" ";
         cout<<endl;
     }

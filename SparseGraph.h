@@ -40,7 +40,8 @@ public:
         assert(v>=0&&v<n);
         assert(w>=0&&w<n);//防止越界
         g[v].push_back(w);//在v的邻接表中加入w节点
-        if(v!=w&&!directed) g[w].push_back(v);//v与w不是同一个节点且图不是有向图，才需要执行改该步骤
+        if(v!=w&&!directed) g[w].push_back(v);//v与w不是同一个节点
+        // 且图不是有向图，才需要执行改该步骤
         m++;
     }
 
@@ -48,18 +49,19 @@ public:
         assert(v>=0&&v<n);
         assert(w>=0&&w<n);
         for(int i=0;i<g[v].size();i++){//遍历与v节点相连的节点
-            if(g[v][i]==w) return true;//如果在邻接串中发现其中某一个节点与w节点相同，则表明v节点与w节点之间已经存在边
+            if(g[v][i]==w) return true;//如果在邻接串中发现其中某一个节点与w节点相同
+            // ，则表明v节点与w节点之间已经存在边
         }
         return false;
     }
 
-    class adjIterator {
+    class adjIterator {//构建稀疏图迭代器
     private:
-        SparseGraph &G;
+        SparseGraph &G;//存储图的引用
         int v;
-        int index;
+        int index;//index起指示作用，指向目前迭代器正在访问的节点
     public:
-        adjIterator(SparseGraph &graph, int v) : G(graph) {
+        adjIterator(SparseGraph &graph, int v) : G(graph) {//传入图的引用以及需要遍历的节点
             this->v = v;
             this->index = 0;
         }
@@ -70,20 +72,21 @@ public:
 
         int begin() {
             index = 0;
-            if (G.g[v].size())
+            if (G.g[v].size())//如果需要遍历的图中的v节点存在着邻边，则返回邻边表中的第一个值
                 return G.g[v][index];
             return -1;
         }
 
-        int next() {
+        int next() {//从当前迭代的元素向下一个元素移动
             index++;
-            if (index < G.g[v].size())
-                return G.g[v][index];
+            if (index < G.g[v].size())//确保访问时不会发生越界
+                return G.g[v][index];//返回需要的元素
             return -1;
         }
 
-        bool end() {
-            return index >= G.g[v].size();
+        bool end() {//判断迭代是否要结束了
+            return index >= G.g[v].size();//目前访问的节点的索引没有
+            // 超过邻边表中的最大索引值，则没结束
         }
     };
     };
