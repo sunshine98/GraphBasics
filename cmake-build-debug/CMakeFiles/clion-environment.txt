@@ -1,4 +1,4 @@
-ToolSet: 3.20@D:\CodeBlocks\MinGW
+ToolSet: w64 5.0@D:\MinGW\mingw32
 Options: 
 
 Options:

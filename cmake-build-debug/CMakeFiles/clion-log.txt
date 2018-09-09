@@ -1,4 +1,4 @@
-"D:\CLion 2017.3.2\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Administrator\CLionProjects\graphbasics
+"D:\CLion 2018.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Administrator\CLionProjects\graphbasics
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/Users/Administrator/CLionProjects/graphbasics/cmake-build-debug

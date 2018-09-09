@@ -3,4 +3,4 @@ project(graphbasics)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(graphbasics main.cpp DenseGraph.h SparseGraph.h)
+add_executable(graphbasics main.cpp DenseGraph.h SparseGraph.h Component.h)

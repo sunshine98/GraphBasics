@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Administrator/CLionProjects/graphbasics/Component.h
+iostream
+-
+cassert
+-
+
 C:/Users/Administrator/CLionProjects/graphbasics/DenseGraph.h
 cassert
 -
@@ -35,4 +41,6 @@ SparseGraph.h
 C:/Users/Administrator/CLionProjects/graphbasics/SparseGraph.h
 DenseGraph.h
 C:/Users/Administrator/CLionProjects/graphbasics/DenseGraph.h
+Component.h
+C:/Users/Administrator/CLionProjects/graphbasics/Component.h
 
