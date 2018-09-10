@@ -12,7 +12,6 @@
 [并查集](https://github.com/sunshine98/UnionFind) | C++ | 数据结构与算法 
 [图](https://github.com/sunshine98/GraphBasics)     | C++ | 数据结构与算法
 [索引堆](https://github.com/sunshine98/IndexHeap) | C++ | 数据结构与算法
-````
 
-### :clap:如果您觉得我的文章对您有用，您可以给我打赏一定的金额鼓励我的前进 
-<img src="http://ww1.sinaimg.cn/large/0060lm7Tly1fmlyfhapirj30p00qadj6.jpg" width = "500" height = "500" alt="图片名称" align=center />
+![赞赏程序码](https://s1.ax1x.com/2018/09/10/iFZEtA.png)
+

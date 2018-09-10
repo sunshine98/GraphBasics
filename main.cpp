@@ -26,8 +26,8 @@ int main() {
     }*/
 
     //DenseGraph
-  DenseGraph g2(N, false);
-    for(int i=0;i<M;i++){
+  DenseGraph g2(N, false);//生成一个无向的稠密图用来进行测试
+    for(int i=0;i<M;i++){//随机的对图中的节点连接M条边
         int a=rand()%N;
         int b=rand()%N;
         g2.addEdge(a,b);
@@ -42,7 +42,7 @@ int main() {
 //    }
  ComPonent<DenseGraph> ComPonent1(g2);
     cout<<"the graph has "<<ComPonent1.count()<<" Component(s)"<<endl;
-    cout<<ComPonent1.isConnect(3,4);
+    cout<<ComPonent1.isConnect(3,7);
 
     return 0;
 }
