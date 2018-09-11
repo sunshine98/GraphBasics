@@ -4,12 +4,12 @@
 #include <cassert>
 #include "SparseGraph.h"
 #include "DenseGraph.h"
-#include "Component.h"
+#include "Path.h"
 using namespace std;
 int main() {
-    int N=20;
-    int M=20;//生成一个有20个节点，100条边的图
-    srand(time(NULL));
+    int N=7;
+   // int M=20;//生成一个有20个节点，100条边的图
+   // srand(time(NULL));
     //sparseGraph
     /*SparseGraph g1(N, false);
     for(int i=0;i<M;i++){//对图中存在的节点进行随机的“连边”操作
@@ -27,11 +27,11 @@ int main() {
 
     //DenseGraph
   DenseGraph g2(N, false);//生成一个无向的稠密图用来进行测试
-    for(int i=0;i<M;i++){//随机的对图中的节点连接M条边
+    /*for(int i=0;i<M;i++){//随机的对图中的节点连接M条边
         int a=rand()%N;
         int b=rand()%N;
         g2.addEdge(a,b);
-    }
+    }*/
 //    for(int v=0;v<N;v++){
 //        cout<<v<<": ";
 //        DenseGraph::adjIterator adj2(g2,v);
@@ -40,9 +40,19 @@ int main() {
 //        }
 //        cout<<endl;
 //    }
- ComPonent<DenseGraph> ComPonent1(g2);
-    cout<<"the graph has "<<ComPonent1.count()<<" Component(s)"<<endl;
-    cout<<ComPonent1.isConnect(3,7);
+
+//添加指定的边用作测试
+g2.addEdge(0,1);
+g2.addEdge(0,2);
+g2.addEdge(0,5);
+g2.addEdge(0,6);
+g2.addEdge(5,3);
+g2.addEdge(5,4);
+g2.addEdge(3,4);
+g2.addEdge(4,6);
+
+Path<DenseGraph> dfs(g2,0);
+dfs.showPath(6);
 
     return 0;
 }
