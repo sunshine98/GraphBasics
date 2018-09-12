@@ -5,9 +5,11 @@
 #include "SparseGraph.h"
 #include "DenseGraph.h"
 #include "Path.h"
+#include "shortPath.h"
 using namespace std;
 int main() {
     int N=7;
+    int end;
    // int M=20;//生成一个有20个节点，100条边的图
    // srand(time(NULL));
     //sparseGraph
@@ -51,8 +53,10 @@ g2.addEdge(5,4);
 g2.addEdge(3,4);
 g2.addEdge(4,6);
 
-Path<DenseGraph> dfs(g2,0);
-dfs.showPath(6);
+shortPath<DenseGraph> bfs(g2,0);
+end=4;
+bfs.showPath(end);
+cout<<"the length  is:"<<bfs.length(end)<<endl;
 
     return 0;
 }

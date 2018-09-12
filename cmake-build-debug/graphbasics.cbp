@@ -95,6 +95,9 @@
 		<Unit filename="C:/Users/Administrator/CLionProjects/graphbasics/main.cpp">
 			<Option target="graphbasics"/>
 		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/graphbasics/shortPath.h">
+			<Option target="graphbasics"/>
+		</Unit>
 		<Unit filename="C:/Users/Administrator/CLionProjects/graphbasics/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

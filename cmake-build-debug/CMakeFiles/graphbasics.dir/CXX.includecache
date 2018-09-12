@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Administrator/CLionProjects/graphbasics/Component.h
-iostream
--
-cassert
--
-
 C:/Users/Administrator/CLionProjects/graphbasics/DenseGraph.h
 cassert
 -
@@ -19,6 +13,16 @@ iostream
 -
 vector
 -
+
+C:/Users/Administrator/CLionProjects/graphbasics/Path.h
+stack
+-
+iostream
+-
+cassert
+C:/Users/Administrator/CLionProjects/graphbasics/cassert
+vector
+C:/Users/Administrator/CLionProjects/graphbasics/vector
 
 C:/Users/Administrator/CLionProjects/graphbasics/SparseGraph.h
 iostream
@@ -41,6 +45,20 @@ SparseGraph.h
 C:/Users/Administrator/CLionProjects/graphbasics/SparseGraph.h
 DenseGraph.h
 C:/Users/Administrator/CLionProjects/graphbasics/DenseGraph.h
-Component.h
-C:/Users/Administrator/CLionProjects/graphbasics/Component.h
+Path.h
+C:/Users/Administrator/CLionProjects/graphbasics/Path.h
+shortPath.h
+C:/Users/Administrator/CLionProjects/graphbasics/shortPath.h
+
+C:/Users/Administrator/CLionProjects/graphbasics/shortPath.h
+iostream
+-
+cassert
+-
+vector
+-
+stack
+-
+queue
+-
 
