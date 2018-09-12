@@ -11,19 +11,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c5bc4bd-e6ec-49e4-9b6c-a8fe4df9b075" name="Default" comment="添加了图的寻路算法">
+    <list default="true" id="4c5bc4bd-e6ec-49e4-9b6c-a8fe4df9b075" name="Default" comment="添加遗漏的shortPath深度遍历算法的文件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Path.h" beforeDir="false" afterPath="$PROJECT_DIR$/Path.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/graphbasics.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/graphbasics.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/graphbasics.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/graphbasics.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/graphbasics.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/graphbasics.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/graphbasics.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/graphbasics.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/graphbasics.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/graphbasics.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/graphbasics.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/graphbasics.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/graphbasics.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/graphbasics.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/graphbasics.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shortPath.h" beforeDir="false" afterPath="$PROJECT_DIR$/shortPath.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,12 +31,12 @@
     <session id="-167886">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.5" value="3" />
+          <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -61,16 +55,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="510" />
-          <entry key="h" value="3987" />
+          <entry key="cpp" value="521" />
+          <entry key="h" value="3990" />
           <entry key="md" value="81" />
-          <entry key="txt" value="110" />
+          <entry key="txt" value="159" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="4497" />
-          <entry key="PLAIN_TEXT" value="191" />
+          <entry key="ObjectiveC" value="4511" />
+          <entry key="PLAIN_TEXT" value="240" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages" />
@@ -81,24 +75,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shortPath.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1393">
-              <caret line="118" column="22" lean-forward="true" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
+            <state relative-caret-position="465">
+              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
               <folding>
                 <element signature="e#113#132#0" expanded="true" />
-                <element signature="e#182#198#0" expanded="true" />
+                <element signature="e#235#251#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+            <state relative-caret-position="305">
+              <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -109,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Path.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="97" column="5" lean-forward="true" selection-start-line="82" selection-start-column="4" selection-end-line="97" selection-end-column="5" />
+            <state relative-caret-position="2545">
+              <caret line="89" column="32" lean-forward="true" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
               <folding>
                 <element signature="e#104#120#0" expanded="true" />
                 <element signature="e#210#226#0" expanded="true" />
@@ -122,7 +116,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DenseGraph.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="2208">
               <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
               <folding>
                 <element signature="e#117#135#0" expanded="true" />
@@ -134,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="288">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -155,9 +149,9 @@
         <option value="$PROJECT_DIR$/Conponent.h" />
         <option value="$PROJECT_DIR$/Component.h" />
         <option value="$PROJECT_DIR$/Path.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/shortPath.h" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -187,6 +181,10 @@
             <path>
               <item name="graphbasics" type="b2602c69:ProjectViewProjectNode" />
               <item name="graphbasics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graphbasics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -263,7 +261,8 @@
       <workItem from="1536572749911" duration="1384000" />
       <workItem from="1536633818875" duration="8291000" />
       <workItem from="1536654594157" duration="2163000" />
-      <workItem from="1536720698413" duration="4684000" />
+      <workItem from="1536720698413" duration="4933000" />
+      <workItem from="1536730415416" duration="1996000" />
     </task>
     <task id="LOCAL-00001" summary="添加了相邻节点迭代器">
       <created>1517294636272</created>
@@ -300,22 +299,36 @@
       <option name="project" value="LOCAL" />
       <updated>1536643359956</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加了图的广度优先遍历算法以及最短路径算法">
+      <created>1536726724958</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1536726724958</updated>
+    </task>
+    <task id="LOCAL-00007" summary="添加遗漏的shortPath深度遍历算法的文件">
+      <created>1536726887382</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1536726887382</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47277000" />
+    <option name="totallyTimeSpent" value="49522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49865228" visible="true" weight="0.2277937" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49865228" visible="true" weight="0.23137535" />
       <window_info id="Structure" order="1" sideWeight="0.4973046" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50269544" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32614556" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32614556" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -326,7 +339,7 @@
       <window_info anchor="bottom" id="Log Manager" order="10" />
       <window_info anchor="bottom" id="Execute Anonymous" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32884097" />
-      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" weight="0.32884097" />
       <window_info anchor="bottom" id="Salesforce" order="14" />
       <window_info anchor="bottom" id="Messages" order="15" weight="0.32614556" />
       <window_info anchor="bottom" id="Database Changes" order="16" show_stripe_button="false" />
@@ -387,18 +400,9 @@
     <MESSAGE value="1.完善代码的注释&#10;2.修改了README文件" />
     <MESSAGE value="完善赞赏码" />
     <MESSAGE value="添加了图的寻路算法" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了图的寻路算法" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>58</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="添加了图的广度优先遍历算法以及最短路径算法" />
+    <MESSAGE value="添加遗漏的shortPath深度遍历算法的文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加遗漏的shortPath深度遍历算法的文件" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/Component.h" />
@@ -445,7 +449,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DenseGraph.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="2208">
           <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
           <folding>
             <element signature="e#117#135#0" expanded="true" />
@@ -453,10 +457,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Path.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="97" column="5" lean-forward="true" selection-start-line="82" selection-start-column="4" selection-end-line="97" selection-end-column="5" />
+        <state relative-caret-position="2545">
+          <caret line="89" column="32" lean-forward="true" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
           <folding>
             <element signature="e#104#120#0" expanded="true" />
             <element signature="e#210#226#0" expanded="true" />
@@ -464,30 +475,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/shortPath.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+        <state relative-caret-position="465">
+          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#113#132#0" expanded="true" />
+            <element signature="e#235#251#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shortPath.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1393">
-          <caret line="118" column="22" lean-forward="true" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
+        <state relative-caret-position="305">
+          <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
           <folding>
-            <element signature="e#113#132#0" expanded="true" />
-            <element signature="e#182#198#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
