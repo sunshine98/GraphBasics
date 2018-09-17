@@ -8,26 +8,32 @@
 #include <cassert>
 #include <iostream>
 #include <vector>
+#include "Edge.h"
 
 using namespace std;
 
+template<typename Weight>
 class DenseGraph {//构建稠密图类，使用邻接矩阵法表示
 private:
     int n, m;//n为图的顶点数量，m为边的数量
     bool directed;//是否为有向图
-    vector<vector<bool>> g;//构建二维数组g作为邻接表的结构基础，其存储类型为布尔类型
+    vector<vector<Edge<Weight> *>> g;//构建二维数组g作为邻接表的结构基础，其存储类型为布尔类型
 public:
     DenseGraph(int n, bool directed) {//构造函数
         this->n = n;
         this->directed = directed;
         this->m = 0;
-        for (int i = 0; i < n; i++) {
-            g.push_back(vector<bool>(n, false));//初始化邻接表的关系全部为false，即各节点之间都不连接
-        }
+        //下面为初始化n*n的矩阵，每一个g[i][j]指向一个Edge，即一条边的信息
+        g = vector<vector<Edge<Weight> *>>(n, vector<Edge<Weight> *>(n, NULL));
+
     }
 
     ~DenseGraph() {
-
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                delete g[i][j];
+            }
+        }
     }
 
     int V() {//返回图中的顶点数量
@@ -38,23 +44,42 @@ public:
         return m;
     };
 
-    void addEdge(int v, int w) {//在v节点和w节点之间建立连接关系
+    void addEdge(int v, int w, Weight weight) {//在v节点和w节点之间建立连接关系
         assert(v >= 0 && v < n);
         assert(w >= 0 && w < n);//防止数组越界访问
-        if (hasEdge(v, w)) return;//v节点存在到w节点的边，则不需要进行加边操作，直接返回即可
-        g[v][w] = true;
-        m++;//增加边的数量
-        if (directed) {//如果为有向图
-            return;
-        } else {//如果为无向图,则邻接图成对称关系，w节点到v节点之间也一定是存在连接的
-            g[w][v] = true;
+        if (hasEdge(v, w)) {//若重复连边，则进行替换操作，删除原来的边信息，重置边信息
+            delete g[v][w];
+            if (v != w && !directed) {//如果为无向图，则另一对边信息也需要删除
+                delete[] g[w][v];
+            }
+            m--;
         }
+        //添加一个新边
+        g[v][w] = new Edge<Weight>(v, w, weight);
+        //如果是无向图的话另一条边也要加上去
+        if (v != w && !directed) {
+            g[w][v] = new Edge<Weight>(w, v, weight);
+        }
+        m++;
+
     }
 
     bool hasEdge(int v, int w) {//判断v节点到w节点之间是否已经存在边
         assert(v >= 0 && v < n);//防止越界
         assert(w >= 0 && w < n);
-        return g[v][w];
+        return g[v][w] != NULL;
+    }
+
+    void show() {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (g[i][j]) {//g[i][j]存在着边
+                    cout << g[i][j]->wt() << "\t";
+                } else {
+                    cout << "NULL\t";
+                }
+            }
+        }
     }
 
     class adjIterator {//构建稠密图的相邻节点迭代器
@@ -74,18 +99,18 @@ public:
 
 //因为邻接矩阵结构的特殊性，即邻接矩阵中的一个节点其关联链表中的元素并不是都有效
         //必须值为true才有效，因此并不能保证直接从第一个元素开始访问，所以index初始化为-1
-        int begin() {
+        Edge<Weight> *begin() {
             index = -1;
             return next();
         }
 
-        int next() {
+        Edge<Weight> *next() {
             for (index += 1; index < G.V(); index++) {
                 if (G.g[v][index] == true) {//只把真正有效的元素返回出去
-                    return index;
+                    return G.g[v][index];
                 }
             }
-            return -1;
+            return NULL;
         }
 
         bool end() {

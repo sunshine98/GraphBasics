@@ -10,8 +10,7 @@
 using namespace std;
 
 int main() {
-    int N = 7;
-    int end;
+    int N = 3;
     // int M=20;//生成一个有20个节点，100条边的图
     // srand(time(NULL));
     //sparseGraph
@@ -30,7 +29,7 @@ int main() {
     }*/
 
     //DenseGraph
-    DenseGraph g2(N, false);//生成一个无向的稠密图用来进行测试
+    DenseGraph<double> g2(N, false);//生成一个无向的稠密图用来进行测试
     /*for(int i=0;i<M;i++){//随机的对图中的节点连接M条边
         int a=rand()%N;
         int b=rand()%N;
@@ -46,19 +45,11 @@ int main() {
 //    }
 
 //添加指定的边用作测试
-    g2.addEdge(0, 1);
-    g2.addEdge(0, 2);
-    g2.addEdge(0, 5);
-    g2.addEdge(0, 6);
-    g2.addEdge(5, 3);
-    g2.addEdge(5, 4);
-    g2.addEdge(3, 4);
-    g2.addEdge(4, 6);
+    g2.addEdge(0, 1, 1.2);
+    g2.addEdge(0, 2, 0.8);
+    g2.addEdge(1, 2, 2.6);
 
-    shortPath<DenseGraph> bfs(g2, 0);
-    end = 6;
-    bfs.showPath(end);
-    cout << "the shortest  length  is:" << bfs.length(end) << endl;
+    g2.show();
 
     return 0;
 }
