@@ -41,31 +41,31 @@ public:
     }
 
     // 输出边的信息
-    friend ostream &operator<<(ostream &os, const Edge &e) {
-        os << e.a << "-" << e.b << ": " << e.weight;
-        return os;
-    }
+friend ostream &operator<<(ostream &os, const Edge &e) {
+    os << e.a << "-" << e.b << ": " << e.weight;
+    return os;
+}
 
-    // 边的大小比较, 是对边的权值的大小比较
-    bool operator<(Edge<Weight> &e) {
-        return weight < e.wt();
-    }
+// 边的大小比较, 是对边的权值的大小比较
+bool operator<(Edge<Weight> &e) {
+    return weight < e.wt();
+}
 
-    bool operator<=(Edge<Weight> &e) {
-        return weight <= e.wt();
-    }
+bool operator<=(Edge<Weight> &e) {
+    return weight <= e.wt();
+}
 
-    bool operator>(Edge<Weight> &e) {
-        return weight > e.wt();
-    }
+bool operator>(Edge<Weight> &e) {
+    return weight > e.wt();
+}
 
-    bool operator>=(Edge<Weight> &e) {
-        return weight >= e.wt();
-    }
+bool operator>=(Edge<Weight> &e) {
+    return weight >= e.wt();
+}
 
-    bool operator==(Edge<Weight> &e) {
-        return weight == e.wt();
-    }
+bool operator==(Edge<Weight> &e) {
+    return weight == e.wt();
+}
 };
 
 #endif //GRAPHBASICS_EDGE_H

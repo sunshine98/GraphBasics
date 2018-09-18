@@ -13,6 +13,14 @@ iostream
 -
 vector
 -
+Edge.h
+C:/Users/Administrator/CLionProjects/graphbasics/Edge.h
+
+C:/Users/Administrator/CLionProjects/graphbasics/Edge.h
+iostream
+-
+assert.h
+-
 
 C:/Users/Administrator/CLionProjects/graphbasics/Path.h
 stack
@@ -31,6 +39,8 @@ cassert
 -
 vector
 -
+Edge.h
+C:/Users/Administrator/CLionProjects/graphbasics/Edge.h
 
 C:/Users/Administrator/CLionProjects/graphbasics/main.cpp
 iostream
